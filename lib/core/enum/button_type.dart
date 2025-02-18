@@ -5,4 +5,5 @@ enum ButtonType {
   // signup,
   yesConfirmShip,
   noCancel,
+  rateNow,
 }

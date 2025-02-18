@@ -60,6 +60,11 @@ class CustomText extends StatelessWidget {
         return Text(AppTexts.myWallet, style: context.getTheme.textTheme.displayLarge);
       case TextType.myAccount:
         return Text(AppTexts.myAccount, style: context.getTheme.textTheme.displayLarge);
+      case TextType.rateNow:
+        return Text(
+          AppTexts.rateShipNow,
+          style: context.getTheme.textTheme.labelSmall?.copyWith(color: AppColors.whiteColor),
+        );
     }
   }
 }

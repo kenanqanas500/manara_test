@@ -16,7 +16,7 @@ enum TextType {
   noCanel,
   editShipTime,
   myShippings,
-
+  rateNow,
   //? for bottom bar
   home,
   shipCalculation,
