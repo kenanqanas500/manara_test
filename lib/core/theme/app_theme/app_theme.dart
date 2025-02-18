@@ -25,8 +25,6 @@ ThemeData appTheme = ThemeData(
     //? for title in home page (my appointements)
     bodyMedium: TextStyle(fontSize: 20, color: AppColors.thirdColor, fontWeight: FontWeight.w500),
 
-    titleLarge: TextStyle(fontSize: 24, color: AppColors.blackColor40),
-
     //? for text fields and
     titleMedium: TextStyle(fontSize: 12, color: AppColors.greyColor, fontWeight: FontWeight.w400),
 
@@ -45,11 +43,19 @@ ThemeData appTheme = ThemeData(
     //? for shipping details
     labelLarge: TextStyle(fontSize: 10, color: AppColors.lightGreyColor, fontWeight: FontWeight.w400),
 
-    displayLarge: TextStyle(fontSize: 22, color: AppColors.blackColor40),
-    displayMedium: TextStyle(fontSize: 16, color: AppColors.blackColor40),
+    //? for ship time
+    labelSmall: TextStyle(fontSize: 8, color: AppColors.primaryLighted),
 
-    labelMedium: TextStyle(fontSize: 14, color: AppColors.blackColor40),
-    labelSmall: TextStyle(fontSize: 8, color: AppColors.blackColor40),
+    //? for ship status
+    labelMedium: TextStyle(fontSize: 15, color: AppColors.lightGreyColor, fontWeight: FontWeight.w400),
+
+    //? for confermation ship status
+    displayMedium: TextStyle(fontSize: 16, color: AppColors.whiteColor, fontWeight: FontWeight.w500),
+
+    //? for bottom bar
+    displayLarge: TextStyle(fontSize: 10, color: AppColors.lightGreyColor),
+
+    titleLarge: TextStyle(fontSize: 24, color: AppColors.blackColor40),
   ),
   elevatedButtonTheme: elevatedButtonThemeData,
   textButtonTheme: textButtonThemeData,
