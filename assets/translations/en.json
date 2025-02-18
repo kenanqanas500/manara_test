@@ -1,0 +1,47 @@
+{
+  "Kenan" : "Kenan",
+    "Contact" : "Contact",
+    "Home" : "Home",
+    "Resume" : "Resume",
+    "Projects" : "Projects",
+    "About" : "About",
+    "Experience" : "Experience",
+    "My Projects" : "My Projects",
+    "Language" : "Language",
+    "Theme" : "Theme",
+    "Hello I am" :  "Hello I am",
+    "Kenan Qanas" : "Kenan Qanas,",
+    "IBuild" : "I am",
+    "platform" : "Flutter Developer",
+    "Have a project?" : "Have a project ?",
+    "Flutter Developer Who Exploring New Things In Dev Part Of IT World!" : "Flutter Developer Who Exploring New Things In Dev Part Of IT World!",
+    "About Me" : "About Me",
+    "I Am Kenan Qanas, Software Engineer | Flutter Developer." : "I am Software Engineer | Flutter Developer.",
+    "Experienced Flutter Developer with a strong background in building robust and scalable mobile applications. Proven expertise in developing over 2 successful projects using Flutter, showcasing a deep understanding of cross-platform development. Proficient in Dart, state management Bloc & Cubit, and integrating third-party APIs, with a focus on delivering high-performance, user-friendly applications. Skilled in agile methodologies, mobile app architecture, and problem-solving. Passionate about Flutter's ability to create efficient, natively compiled applications from a single codebase. A results-driven professional with a solid foundation in Information Technology." : "Experienced Flutter Developer with a strong background in building robust and scalable mobile applications. Proven expertise in developing over 2 successful projects using Flutter, showcasing a deep understanding of cross-platform development. Proficient in Dart, state management Bloc & Cubit, and integrating third-party APIs, with a focus on delivering high-performance, user-friendly applications. Skilled in agile methodologies, mobile app architecture, and problem-solving. Passionate about Flutter's ability to create efficient, natively compiled applications from a single codebase. A results-driven professional with a solid foundation in Information Technology.",
+    "Skills" : "Skills",
+    "firstSkill": "Flutter Framework Skills:\n- Proficient in building responsive and adaptive UIs with Flutter.\n- Expertise in Flutter widgets and state management (Bloc & Cubit).\n- Knowlendge with building web, mobile, and desktop applications using Flutter.\n- Knowledge of widget lifecycle, animations, and custom widgets.\n- Familiar with Flutter Web APIs and best practices for web development.",
+
+  "secondSkill" : "Dart Programming:\n- Strong command over Dart programming language.\n- Object-Oriented Programming (OOP) principles in Dart.\n- Dart asynchronous programming (async, await, Future, Stream).",
+
+   "Cross-platform Development:\n- Experience with cross-platform development (iOS, Android, Web, and Desktop).\n- Understanding platform-specific code (Android, iOS) integration in Flutter." : "Cross-platform Development:\n- Experience with cross-platform development (iOS, Android, Web, and Desktop).\n- Understanding platform-specific code (Android, iOS) integration in Flutter.",
+
+   "State Management:\n- Expertise in state management techniques Bloc & Cubit.\n- Knowledgement in GetX state management.\n- Experience in managing large-scale stateful applications." : "State Management:\n- Expertise in state management techniques Bloc & Cubit.\n- Knowledgement in GetX state management.\n- Experience in managing large-scale stateful applications.",
+
+   "Languages and Themes:\n- Experience in multilanguges app and multithemes app." : "Languages and Themes:\n- Experience in multilanguges app and multithemes app.",
+  
+   "Version Control:\n- Proficient in Git and GitLab for version control and collaboration." : "Version Control:\n- Proficient in Git and GitLab for version control and collaboration.",
+
+   "Deployment & Optimization:\n- Good knowledge deploying Flutter apps to stores (play store and apple store).\n- Optimizing app performance for web and mobile environments." : "Deployment & Optimization:\n- Good knowledge deploying Flutter apps to stores (play store and apple store).\n- Optimizing app performance for web and mobile environments.",
+
+   "UI/UX Design:\n- Experience in implementing Material Design and Cupertino style in apps.\n- Knowledge of responsive design principles for web and mobile.\n- Familiar with accessibility standards for web development." : "UI/UX Design:\n- Experience in implementing Material Design and Cupertino style in apps.\n- Knowledge of responsive design principles for web and mobile.\n- Familiar with accessibility standards for web development.",
+
+   "Tools & Libraries:\n- Firebase, SQLite, Hive for database management.\n- Package management with pub.dev." : "Tools & Libraries:\n- Firebase, SQLite, Hive for database management.\n- Package management with pub.dev.",
+   "waiting" : "what are you waiting for?",
+   "mailMe" : "mail me now!",
+   "flutterDesc" : "Cross-platform mobile and web app developer specializing in Flutter, building high-performance, responsive, and visually appealing applications with a focus on clean code, seamless user experience, and efficient integration across Android, iOS, and web platforms",
+   "getInTouch" : "Get In Touch",
+   "dark" : "Dark Theme",
+   "light" : "Light Theme",
+   "arabic" : "Arabic",
+   "english" : "English"
+}

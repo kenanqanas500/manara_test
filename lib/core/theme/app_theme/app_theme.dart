@@ -8,6 +8,7 @@ import 'package:manara_test/core/theme/input_decoration_theme.dart';
 import 'package:manara_test/core/theme/scroll_bar_theme_data.dart';
 
 import '../../colors/app_colors.dart';
+import '../slider_theme._data.dart';
 
 ThemeData appTheme = ThemeData(
   brightness: Brightness.light,
@@ -53,6 +54,7 @@ ThemeData appTheme = ThemeData(
   elevatedButtonTheme: elevatedButtonThemeData,
   textButtonTheme: textButtonThemeData,
   outlinedButtonTheme: outlinedButtonTheme(),
+  sliderTheme: sliderThemeData,
   inputDecorationTheme: lightInputDecorationTheme,
   checkboxTheme: checkboxThemeData.copyWith(
     side: const BorderSide(color: AppColors.blackColor40),

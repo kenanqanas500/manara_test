@@ -1,1 +1,1 @@
-enum ImageType { startUp, login, signup }
+enum ImageType { logo, notification, arrowUp }

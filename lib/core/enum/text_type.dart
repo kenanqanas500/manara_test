@@ -16,6 +16,7 @@ enum TextType {
   noCanel,
   editShipTime,
   myShippings,
+
   //? for bottom bar
   home,
   shipCalculation,

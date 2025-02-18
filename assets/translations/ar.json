@@ -1,0 +1,48 @@
+{
+    "Kenan" : "كنان",
+    "Contact" : "اتصل بي",
+    "Home" : "الرئيسية",
+    "Resume" : "السيرة الذاتية",
+    "About" : "من أنا",
+    "Experience" : "خبرتي",
+    "Projects" : "المشاريع",
+    "My Projects" : "مشاريعي",
+    "Language" : "اللغة",
+    "Theme" : "الثيم",
+    "Hello I am" : "مرحبا، انا",
+    "Kenan Qanas" : "كنان قنص",
+    "IBuild" : "أقوم ببناء",
+    "platform" : "أندرويد ايفون ويب",
+    "Have a project?" : "لديك مشروع ؟",
+    "Flutter Developer Who Exploring New Things In Dev Part Of IT World!" : "مطور تطبيقات موبايل، وأسعى الى استكشاف كل ماهوجديد في عالم التقنية!",
+    "About Me" : "نبذة عني",
+    "I Am Kenan Qanas, Software Engineer | Flutter Developer." : "انا مهندس برمجيات ومطور تطبيقات موبايل",
+    "Experienced Flutter Developer with a strong background in building robust and scalable mobile applications. Proven expertise in developing over 2 successful projects using Flutter, showcasing a deep understanding of cross-platform development. Proficient in Dart, state management Bloc & Cubit, and integrating third-party APIs, with a focus on delivering high-performance, user-friendly applications. Skilled in agile methodologies, mobile app architecture, and problem-solving. Passionate about Flutter's ability to create efficient, natively compiled applications from a single codebase. A results-driven professional with a solid foundation in Information Technology." : "مطور  ذو خبرة مع خلفية قوية في بناء تطبيقات جوال قوية وقابلة للتطوير. خبرة مثبتة في تطوير أكثر من مشروعين ناجحين باستخدام فلتر مما يُظهر فهمًا عميقًا للتطوير عبر الأنظمة الأساسية. متمكن من وإدارة الحالة ودمج واجهات برمجة التطبيقات التابعة لجهات خارجية، مع التركيز على تقديم تطبيقات عالية الأداء وسهلة الاستخدام. ماهر في منهجيات الرشيقة، وهندسة تطبيقات الجوال وحل المشكلات. شغوف بقدرة على إنشاء تطبيقات فعالة ومُجمَّعة محليًا من قاعدة كود واحدة. محترف مدفوع بالنتائج مع أساس متين في تكنولوجيا المعلومات.",
+    "Skills" : "المهارات",
+    "firstSkill": "مهارات إطار العمل فلتر:\n- مهارات في بناء تطبيقات متجاوبة مع اصدارات الموبايل ومتوافقة مع أحجام الشاشات.\n- خبرة في الويدجيتس وإدارة حالة التطبيق من خلال بلوك وكيوبيت.\n- معرفة في بناء تطبيقات الموبايل والويب والحاسب.\n- معرفة في إعادة استخدام الويدجيتس والحركات ودورة حياة الويدجيتس.\n- معرفة في واجهة تطبيقات الموبايل مع أفضل الممارسات لتطويرها.",
+
+    "secondSkill" : "البرمجة بلغة دارت:\n- خبرة قوية في أوامر لغة دارت\n- مبادئ وأساسيات اللغة الغرضية التوجه.\n- عمليات لغة دارت المستقبلية والغير متزامنة.",
+  
+     "Cross-platform Development:\n- Experience with cross-platform development (iOS, Android, Web, and Desktop).\n- Understanding platform-specific code (Android, iOS) integration in Flutter." : "التطوير عبر الأنظمة الأساسية:\n- خبرة في التطوير على أنظمة الأندرويد والايفون والويب والويندوز.\n- فهم عميق في تكامل التعليمات البرمجية الخاصة بالأنظمة الأساسية للأندرويد والأيفون.",
+  
+     "State Management:\n- Expertise in state management techniques Bloc & Cubit.\n- Knowledgement in GetX state management.\n- Experience in managing large-scale stateful applications." : "إدارة الحالة:\n- خبرة في إدارة حالة التطبيقات من خلال تقنيات البلوك والكيوبيت.\n- معرفة جيدة في تقنية غيت إكس.\n- خبرة في إدارة التطبيقات ذات الحالة واسعة النطاق.",
+  
+     "Languages and Themes:\n- Experience in multilanguges app and multithemes app." : "اللغة والثيم:\n- خبرة في بناء تطبيقات متعددة اللغة والثيم.",
+  
+     "Version Control:\n- Proficient in Git and GitLab for version control and collaboration." : "التحكم بالإصدار:\n- احترافية جيدة في العمل التعاوني من خلال أنظمة التحكم بالإصدار مثل الغيتلاب والغيت هاب.",
+  
+     "Deployment & Optimization:\n- Good knowledge deploying Flutter apps to stores (play store and apple store).\n- Optimizing app performance for web and mobile environments." : "نشر التطبيقات وتحسينها:\n- معرفة جيدة في نشر التطبيقات على المتجرين أبل وأندرويد.\n- تحسين أداء التطبيقات على الويب والموبايل.",
+  
+     "UI/UX Design:\n- Experience in implementing Material Design and Cupertino style in apps.\n- Knowledge of responsive design principles for web and mobile.\n- Familiar with accessibility standards for web development." : "واجهة وتجربة المستخدم:\n- خبرة في التصاميم الخاصة ببيئة التشغيل سواء على الأندرويد أو على الأيفون.\n- معرفة في أساسيات التصميم المتجاوب لأحجام الشاشات في الويب والموبايل.\n- الإلمام بمعايير إمكانية الوصول لتطوير تطبيقات الويب.",
+  
+     "Tools & Libraries:\n- Firebase, SQLite, Hive for database management.\n- Package management with pub.dev." : "أدوات و مكتبات:\n- فاير بيز و إس كيو إل و هايف في إدارة التخزين الداخلي.\n- إدارة المكتبات الخاصة ببيئة فلتر من الموقع الرسمي.",
+     "waiting" : "ماذا تنتظر؟",
+     "flutterDesc" : "مطور تطبيقات ويب وموبايل متعدد الأنظمة الأساسية متخصص في فلتر ويقوم ببناء تطبيقات عالية الأداء ومستجيبة وجذابة بصريًا مع التركيز على الكود النظيف وتجربة المستخدم السلسة والتكامل الفعال عبر أنظمة أندرويد وأيفون ومنصات الويب",
+     "getInTouch" : "أرسل إيميلا",
+     "dark" : "الوضع الليلي",
+     "light" : "الوضع النهاري",
+     "arabic" : "العربية",
+   "english" : "الإنكليزية",
+   "mailMe" : "أرسل إيميلا"
+  
+}

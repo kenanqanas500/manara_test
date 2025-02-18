@@ -21,7 +21,7 @@ class AppRouter {
       //     child: SignUpView(),
       //   ));
       default:
-        return MaterialPageRoute(settings: settings, builder: (_) => const HomeWrapper());
+        return MaterialPageRoute(settings: settings, builder: (_) => HomeWrapper());
     }
   }
 }

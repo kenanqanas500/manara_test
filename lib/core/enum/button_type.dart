@@ -1,6 +1,8 @@
 enum ButtonType {
-  joinAsDriver,
-  GetProductNow,
-  login,
-  signup,
+  // joinAsDriver,
+  // getProductNow,
+  // login,
+  // signup,
+  yesConfirmShip,
+  noCancel,
 }

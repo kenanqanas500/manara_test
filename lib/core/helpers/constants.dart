@@ -5,4 +5,6 @@ abstract class AppConstants {
   static const double defaultBorderRadious = 12.0;
   // for font family
   static const String appFont = 'IBM Plex Sans Arabic';
+  // path fortranslation
+  static String translation = 'assets/translations';
 }
