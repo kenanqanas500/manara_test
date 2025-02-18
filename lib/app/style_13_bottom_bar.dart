@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manara_test/core/colors/app_colors.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 class Style13BottomNavBar extends StatelessWidget {
@@ -21,7 +22,7 @@ class Style13BottomNavBar extends StatelessWidget {
             child: IconTheme(
               data: IconThemeData(
                 size: item.iconSize,
-                color: isSelected ? item.activeForegroundColor : item.inactiveForegroundColor,
+                color: isSelected ? AppColors.thirdColor : AppColors.lightGreyColor,
               ),
               child: isSelected ? item.icon : item.inactiveIcon,
             ),
@@ -31,7 +32,7 @@ class Style13BottomNavBar extends StatelessWidget {
               child: Text(
                 item.title!,
                 style: item.textStyle.apply(
-                  color: isSelected ? item.activeForegroundColor : item.inactiveForegroundColor,
+                  color: isSelected ? AppColors.thirdColor : AppColors.lightGreyColor,
                 ),
               ),
             ),
@@ -47,14 +48,14 @@ class Style13BottomNavBar extends StatelessWidget {
             height: navBarConfig.navBarHeight,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: item.activeForegroundColor,
+              color: AppColors.primaryColor,
               boxShadow: navBarDecoration.boxShadow,
             ),
             child: Center(
               child: IconTheme(
                 data: IconThemeData(
                   size: item.iconSize,
-                  color: item.inactiveForegroundColor,
+                  color: AppColors.lightGreyColor,
                 ),
                 child: isSelected ? item.icon : item.inactiveIcon,
               ),
@@ -69,7 +70,7 @@ class Style13BottomNavBar extends StatelessWidget {
                   child: Text(
                     item.title!,
                     style: item.textStyle.apply(
-                      color: isSelected ? item.activeForegroundColor : item.inactiveForegroundColor,
+                      color: isSelected ? AppColors.thirdColor : AppColors.lightGreyColor,
                     ),
                   ),
                 ),
