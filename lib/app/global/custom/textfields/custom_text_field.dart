@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manara_test/app/global/custom/textfields/general_text_field.dart';
+import 'package:manara_test/core/colors/app_colors.dart';
 import 'package:manara_test/core/enum/text_form_field_type.dart';
 import 'package:manara_test/core/translation/app_texts.dart';
 
@@ -25,6 +26,10 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return GeneralTextField(
       hintText: AppTexts.shipNameOrNumberForSeach,
+      iconInsideField: Icon(
+        Icons.search,
+        color: AppColors.lightGreyColor,
+      ),
     );
   }
 }

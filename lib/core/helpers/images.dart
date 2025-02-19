@@ -22,4 +22,5 @@ class Images {
 
   //? arrow up image
   static const arrowUp = 'assets/images/arrow up.png';
+  static const arrowRight = 'assets/images/arrow right.png';
 }

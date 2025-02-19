@@ -2,6 +2,7 @@ enum ImageType {
   logo,
   notification,
   arrowUp,
+  arrowRight,
   home,
   shipCalculate,
   myWalle,

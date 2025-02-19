@@ -34,6 +34,8 @@ class CustomImage extends StatelessWidget {
         return BuyMeImage();
       case ImageType.boxingAndExpress:
         return BoxingAndExpressImage();
+      case ImageType.arrowRight:
+        return ArrowRightImage();
     }
   }
 }
@@ -143,5 +145,14 @@ class BoxingAndExpressImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GeneralImage(imagePath: Images.boxing);
+  }
+}
+
+class ArrowRightImage extends StatelessWidget {
+  const ArrowRightImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GeneralImage(imagePath: Images.arrowRight);
   }
 }

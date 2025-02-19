@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:manara_test/app/global/custom/buttons/general_button.dart';
 import 'package:manara_test/app/global/custom/texts/custom_text.dart';
 import 'package:manara_test/core/colors/app_colors.dart';
@@ -8,7 +9,7 @@ import 'package:manara_test/core/extensions/theme_ext.dart';
 import '../../../../core/enum/button_type.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.type, this.onPressed});
+  const CustomButton({super.key, required this.type, required this.onPressed});
 
   final ButtonType type;
   final void Function()? onPressed;
@@ -75,10 +76,13 @@ class RateNowButton extends StatelessWidget {
     return GeneralButton(
       onPressed: onPressed,
       style: context.getTheme.elevatedButtonTheme.style?.copyWith(
-        backgroundColor: WidgetStatePropertyAll(AppColors.whiteColor),
-        foregroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+        textStyle: context.getTheme.textButtonTheme.style?.textStyle,
+        // backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+        minimumSize: WidgetStatePropertyAll(Size(50.w, 17.h)),
       ),
-      child: CustomText(textType: TextType.rateNow),
+      child: CustomText(
+        textType: TextType.rateNow,
+      ),
     );
   }
 }

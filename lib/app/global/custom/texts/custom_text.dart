@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:manara_test/app/global/custom/texts/general_text.dart';
 import 'package:manara_test/core/colors/app_colors.dart';
 import 'package:manara_test/core/enum/text_type.dart';
@@ -9,24 +10,49 @@ class CustomText extends StatelessWidget {
   const CustomText({
     super.key,
     required this.textType,
+    this.text,
   });
   final TextType textType;
+  final String? text;
 
   @override
   Widget build(BuildContext context) {
     switch (textType) {
       case TextType.packaging:
-        return Text(AppTexts.packaging, style: context.getTheme.textTheme.bodySmall);
+        return Text(AppTexts.packaging,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.visible,
+            style: context.getTheme.textTheme.bodySmall);
       case TextType.shipping:
-        return Text(AppTexts.shippingHomeFurnature, style: context.getTheme.textTheme.bodySmall);
+        return Text(AppTexts.shippingHomeFurnature,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.visible,
+            style: context.getTheme.textTheme.bodySmall);
       case TextType.buyMe:
-        return Text(AppTexts.buyMe, style: context.getTheme.textTheme.bodySmall);
+        return Text(AppTexts.buyMe,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.visible,
+            style: context.getTheme.textTheme.bodySmall);
       case TextType.boxing:
-        return Text(AppTexts.boxingAndExpress, style: context.getTheme.textTheme.bodySmall);
+        return Text(AppTexts.boxingAndExpress,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.visible,
+            style: context.getTheme.textTheme.bodySmall);
       case TextType.writeNumberOrName:
         return Text(AppTexts.shipNameOrNumberForSeach, style: context.getTheme.textTheme.titleMedium);
       case TextType.myAppoientments:
         return Text(AppTexts.myAppointments, style: context.getTheme.textTheme.bodyMedium);
+      case TextType.previousAppointments:
+        return Text(AppTexts.previousAppointments,
+            style: context.getTheme.textTheme.bodyMedium?.copyWith(
+              color: AppColors.lightGreyColor,
+              fontSize: 12.sp,
+            ));
+
       case TextType.seeLess:
         return Text(AppTexts.seeLess, style: context.getTheme.textTheme.titleSmall);
       case TextType.shipTime:
@@ -63,7 +89,16 @@ class CustomText extends StatelessWidget {
       case TextType.rateNow:
         return Text(
           AppTexts.rateShipNow,
-          style: context.getTheme.textTheme.labelSmall?.copyWith(color: AppColors.whiteColor),
+          style:
+              context.getTheme.textTheme.labelSmall?.copyWith(color: AppColors.blackColor, fontSize: 20.sp),
+        );
+      case TextType.shipName:
+        return Text(text!, style: context.getTheme.textTheme.bodyMedium?.copyWith(fontSize: 15.sp));
+
+      case TextType.deliveredAt:
+        return Text(
+          text!,
+          style: context.getTheme.textTheme.displaySmall,
         );
     }
   }

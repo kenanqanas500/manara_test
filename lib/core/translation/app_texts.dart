@@ -20,7 +20,7 @@ class AppTexts {
   static const String myWallet = 'محفظتي';
   static const String myAccount = 'حسابي';
 
-  static const String previousShipping = 'المواعيد السابقة';
+  static const String previousAppointments = 'المواعيد السابقة';
   static const String rateShipNow = 'قيّم الآن';
 
   //? for hints

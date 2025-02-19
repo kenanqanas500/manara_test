@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 abstract class AppColors {
   static const Color primaryColor = Color(0xFFF24822);
   static const Color secondaryColor = Color(0xFF2534A6);
@@ -24,4 +26,7 @@ abstract class AppColors {
   static const Color errorColor = Color(0xFFEA5B5B);
   // ? background screen color
   static const Color scaffoldBackGroundColor = Color(0xFFFFFCFA);
+
+  //? transparent color
+  static const Color transparent = Colors.transparent;
 }
