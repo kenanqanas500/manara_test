@@ -90,12 +90,22 @@ class CustomText extends StatelessWidget {
         return Text(
           AppTexts.rateShipNow,
           style:
-              context.getTheme.textTheme.labelSmall?.copyWith(color: AppColors.blackColor, fontSize: 20.sp),
+              context.getTheme.textTheme.labelSmall?.copyWith(color: AppColors.whiteColor, fontSize: 10.sp),
         );
       case TextType.shipName:
         return Text(text!, style: context.getTheme.textTheme.bodyMedium?.copyWith(fontSize: 15.sp));
 
       case TextType.deliveredAt:
+        return Text(
+          text!,
+          style: context.getTheme.textTheme.displaySmall,
+        );
+      case TextType.shipCancelled:
+        return Text(
+          AppTexts.shipCancelled,
+          style: context.getTheme.textTheme.displaySmall,
+        );
+      case TextType.shipDate:
         return Text(
           text!,
           style: context.getTheme.textTheme.displaySmall,

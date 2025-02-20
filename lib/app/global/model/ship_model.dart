@@ -1,4 +1,4 @@
-enum ShipStatus { ordered, confirmed, onTheWay, delivered }
+enum ShipStatus { ordered, confirmed, onTheWay, delivered, cancelled }
 
 class ShipModel {
   String shipName;
@@ -8,6 +8,7 @@ class ShipModel {
   String latitude;
   String shipDate;
   String shipRate;
+  bool? isOpened;
 
   ShipModel({
     required this.shipName,
@@ -17,6 +18,7 @@ class ShipModel {
     required this.latitude,
     required this.shipDate,
     required this.shipRate,
+    this.isOpened = false,
   });
 
   factory ShipModel.fromJson(Map<String, dynamic> json) {
@@ -31,6 +33,7 @@ class ShipModel {
       latitude: json['latitude'] ?? '',
       shipDate: json['shipDate'] ?? '',
       shipRate: json['shipRate'] ?? '',
+      isOpened: false,
     );
   }
 
@@ -44,5 +47,25 @@ class ShipModel {
       'shipDate': shipDate,
       'shipRate': shipRate,
     };
+  }
+
+  ShipModel copyWithDynamic(Map<String, dynamic> updates) {
+    return ShipModel(
+      shipName: updates['shipName'] ?? shipName,
+      shipTime: updates['shipTime'] ?? shipTime,
+      shipStatus: updates['shipStatus'] != null
+          ? updates['shipStatus'] is ShipStatus
+              ? updates['shipStatus']
+              : ShipStatus.values.firstWhere(
+                  (e) => e.toString().split('.').last == updates['shipStatus'],
+                  orElse: () => shipStatus,
+                )
+          : shipStatus,
+      longitude: updates['longitude'] ?? longitude,
+      latitude: updates['latitude'] ?? latitude,
+      shipDate: updates['shipDate'] ?? shipDate,
+      shipRate: updates['shipRate'] ?? shipRate,
+      isOpened: updates['isOpened'] ?? isOpened,
+    );
   }
 }

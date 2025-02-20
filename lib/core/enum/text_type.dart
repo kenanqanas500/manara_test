@@ -20,6 +20,8 @@ enum TextType {
   editShipTime,
   myShippings,
   rateNow,
+  shipCancelled,
+  shipDate,
   //? for bottom bar
   home,
   shipCalculation,

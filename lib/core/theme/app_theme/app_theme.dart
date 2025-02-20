@@ -58,7 +58,7 @@ ThemeData appTheme = ThemeData(
     titleLarge: TextStyle(fontSize: 24, color: AppColors.blackColor40),
   ),
   elevatedButtonTheme: elevatedButtonThemeData,
-  textButtonTheme: textButtonThemeData,
+  // textButtonTheme: textButtonThemeData,
   outlinedButtonTheme: outlinedButtonTheme(),
   sliderTheme: sliderThemeData,
   inputDecorationTheme: lightInputDecorationTheme,

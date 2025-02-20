@@ -22,6 +22,7 @@ class AppTexts {
 
   static const String previousAppointments = 'المواعيد السابقة';
   static const String rateShipNow = 'قيّم الآن';
+  static const String shipCancelled = 'تم الإلغاء';
 
   //? for hints
   static const String shipNameOrNumberForSeach = 'اكتب رقم أو اسم الشحنة للبحث عنها';
