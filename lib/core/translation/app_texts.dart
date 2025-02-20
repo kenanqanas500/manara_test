@@ -10,7 +10,7 @@ class AppTexts {
   static const String shipConfirmOrdered = 'تأكيد الموعد';
   static const String shipOnTheWay = 'في الطريق';
   static const String shipReceived = 'استلام الطلب';
-  static const String sureToConfirmShipOrder = 'هل تريد تأكيد الموعد';
+  static const String sureToConfirmShipOrder = 'هل تريد تأكيد الموعد؟';
   static const String yesSure = 'نعم، تأكيد';
   static const String noCancel = 'لا، إلغاء';
   static const String myShippings = 'شحناتي';

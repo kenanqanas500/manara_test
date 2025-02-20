@@ -47,7 +47,7 @@ ThemeData appTheme = ThemeData(
     labelSmall: TextStyle(fontSize: 8, color: AppColors.primaryLighted),
 
     //? for ship status
-    labelMedium: TextStyle(fontSize: 15, color: AppColors.lightGreyColor, fontWeight: FontWeight.w400),
+    labelMedium: TextStyle(fontSize: 12, color: AppColors.lightGreyColor, fontWeight: FontWeight.w400),
 
     //? for confermation ship status
     displayMedium: TextStyle(fontSize: 16, color: AppColors.whiteColor, fontWeight: FontWeight.w500),

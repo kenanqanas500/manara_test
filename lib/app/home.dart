@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                             },
                             child: Container(
                               // width: double.infinity,
-                              height: isSelected ? 200.h : 50.h,
+                              height: isSelected ? 350.h : 50.h,
                               margin: EdgeInsets.only(
                                 bottom: 20.sp,
                               ),
@@ -178,7 +178,8 @@ class _HomeState extends State<Home> {
                                     ),
                                   ]),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment:
+                                    isSelected ? MainAxisAlignment.start : MainAxisAlignment.center,
                                 children: [
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

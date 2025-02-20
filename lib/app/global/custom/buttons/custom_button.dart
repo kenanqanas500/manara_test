@@ -45,6 +45,11 @@ class YesConfirmShipButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GeneralButton(
       onPressed: onPressed,
+      style: context.getTheme.elevatedButtonTheme.style?.copyWith(
+        // textStyle: context.getTheme.textButtonTheme.style?.textStyle,
+        // backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+        minimumSize: WidgetStatePropertyAll(Size(140.w, 30.h)),
+      ),
       child: CustomText(textType: TextType.yesSure),
     );
   }
@@ -59,8 +64,19 @@ class NoCancelButton extends StatelessWidget {
     return GeneralButton(
       onPressed: onPressed,
       style: context.getTheme.elevatedButtonTheme.style?.copyWith(
+        // textStyle: context.getTheme.textButtonTheme.style?.textStyle,
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              10.r,
+            ),
+            side: BorderSide(
+              color: AppColors.primaryColor,
+            ),
+          ),
+        ),
         backgroundColor: WidgetStatePropertyAll(AppColors.whiteColor),
-        foregroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+        minimumSize: WidgetStatePropertyAll(Size(140.w, 30.h)),
       ),
       child: CustomText(textType: TextType.noCanel),
     );
