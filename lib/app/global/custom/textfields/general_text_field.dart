@@ -6,22 +6,22 @@ import 'package:manara_test/core/colors/app_colors.dart';
 class GeneralTextField extends StatelessWidget {
   const GeneralTextField(
       {super.key,
-      this.suffixIcon,
+      this.iconInsideFieldAtEnd,
       this.hintText,
       this.iconBeforField,
       this.iconAfterField,
       this.hintStyle,
       this.inputFormatters,
       this.keyboardType,
-      this.iconInsideField});
-  final Widget? suffixIcon;
+      this.iconInsideFieldAtStart});
+  final Widget? iconInsideFieldAtEnd;
   final String? hintText;
   final Widget? iconBeforField;
   final Widget? iconAfterField;
   final TextStyle? hintStyle;
   final List<TextInputFormatter>? inputFormatters;
   final TextInputType? keyboardType;
-  final Widget? iconInsideField;
+  final Widget? iconInsideFieldAtStart;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +36,9 @@ class GeneralTextField extends StatelessWidget {
           border: OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.lightGreyColor),
               borderRadius: BorderRadius.circular(20.r)),
-          suffixIcon: suffixIcon,
+          suffixIcon: iconInsideFieldAtEnd,
           hintText: hintText,
-          prefixIcon: iconInsideField,
+          prefixIcon: iconInsideFieldAtStart,
           prefix: iconBeforField,
           suffix: iconAfterField,
           hintStyle: hintStyle,

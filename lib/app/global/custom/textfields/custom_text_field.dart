@@ -26,7 +26,7 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return GeneralTextField(
       hintText: AppTexts.shipNameOrNumberForSeach,
-      iconInsideField: Icon(
+      iconInsideFieldAtStart: Icon(
         Icons.search,
         color: AppColors.lightGreyColor,
       ),
@@ -41,6 +41,10 @@ class EditField extends StatelessWidget {
   Widget build(BuildContext context) {
     return GeneralTextField(
       hintText: AppTexts.editShipTime,
+      iconInsideFieldAtEnd: Icon(
+        Icons.edit,
+        color: AppColors.lightGreyColor,
+      ),
     );
   }
 }
