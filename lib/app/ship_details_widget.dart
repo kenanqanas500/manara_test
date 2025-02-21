@@ -27,8 +27,6 @@ class _ShipDetailsWidgetState extends State<ShipDetailsWidget> {
 
   @override
   void initState() {
-    log("lat => ${double.parse(widget.shipModel.latitude)}");
-    log("long => ${double.parse(widget.shipModel.longitude)}");
     currentValue = widget.shipModel.shipStatus == ShipStatus.ordered
         ? 1.5
         : widget.shipModel.shipStatus == ShipStatus.confirmed

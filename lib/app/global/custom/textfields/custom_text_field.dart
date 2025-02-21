@@ -42,7 +42,7 @@ class EditField extends StatelessWidget {
     return GeneralTextField(
       hintText: AppTexts.editShipTime,
       iconInsideFieldAtEnd: Icon(
-        Icons.edit,
+        Icons.edit_road_sharp,
         color: AppColors.lightGreyColor,
       ),
     );
