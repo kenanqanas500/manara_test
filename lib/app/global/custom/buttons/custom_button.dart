@@ -94,7 +94,7 @@ class RateNowButton extends StatelessWidget {
       style: context.getTheme.elevatedButtonTheme.style?.copyWith(
         // textStyle: context.getTheme.textButtonTheme.style?.textStyle,
         // backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
-        minimumSize: WidgetStatePropertyAll(Size(50.w, 17.h)),
+        minimumSize: WidgetStatePropertyAll(Size(50.w, 5.h)),
       ),
       child: CustomText(
         textType: TextType.rateNow,

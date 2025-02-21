@@ -1,3 +1,5 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:manara_test/app/global/custom/buttons/custom_button.dart';
@@ -35,30 +37,30 @@ class _HomeState extends State<Home> {
         latitude: '-74.0060',
         shipDate: 'اليوم 1/1/2025',
         shipRate: '0'),
-    // ShipModel(
-    //     shipName: 'شحنة جو بايدن',
-    //     shipTime: '07:15 م',
-    //     shipStatus: ShipStatus.delivered,
-    //     longitude: '40.7128',
-    //     latitude: '-74.0060',
-    //     shipDate: '2/8/2024',
-    //     shipRate: '0'),
-    // ShipModel(
-    //     shipName: 'شحنة عمرو دياب ',
-    //     shipTime: '05:00 م',
-    //     shipStatus: ShipStatus.cancelled,
-    //     longitude: '40.7128',
-    //     latitude: '-74.0060',
-    //     shipDate: '20/9/2025',
-    //     shipRate: '0'),
-    // ShipModel(
-    //     shipName: 'شحنة ياسر عرفات ',
-    //     shipTime: '05:00 م',
-    //     shipStatus: ShipStatus.delivered,
-    //     longitude: '40.7128',
-    //     latitude: '-74.0060',
-    //     shipDate: '7/11/2025',
-    //     shipRate: '3'),
+    ShipModel(
+        shipName: 'شحنة جو بايدن',
+        shipTime: '07:15 م',
+        shipStatus: ShipStatus.delivered,
+        longitude: '51.5074',
+        latitude: '-0.1278',
+        shipDate: '2/8/2024',
+        shipRate: '0'),
+    ShipModel(
+        shipName: 'شحنة عمرو دياب ',
+        shipTime: '05:00 م',
+        shipStatus: ShipStatus.cancelled,
+        longitude: '35.6895',
+        latitude: '139.6917',
+        shipDate: '20/9/2025',
+        shipRate: '0'),
+    ShipModel(
+        shipName: 'شحنة ياسر عرفات ',
+        shipTime: '05:00 م',
+        shipStatus: ShipStatus.delivered,
+        longitude: '40.7128',
+        latitude: '-74.0060',
+        shipDate: '7/11/2025',
+        shipRate: '3'),
   ];
 
   final List<CategoryModel> categories = [
@@ -76,7 +78,11 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding.sp),
+        padding: EdgeInsets.only(
+          right: AppConstants.defaultPadding.sp,
+          left: AppConstants.defaultPadding.sp,
+          top: AppConstants.defaultPadding.sp,
+        ),
         child: SizedBox(
           width: double.infinity,
           height: double.infinity,
@@ -91,31 +97,39 @@ class _HomeState extends State<Home> {
                   CustomImage(type: ImageType.logo),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: categories
-                    .map((item) => Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(10.sp),
-                              width: 70.w,
-                              height: 70.h,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20.r),
-                                  border: Border.all(color: AppColors.lightGreyColor)),
-                              child: item.icon,
-                            ),
-                            SizedBox(
-                              height: 3.h,
-                            ),
-                            Container(
-                              constraints: BoxConstraints(maxWidth: 70.w),
-                              child: item.name,
-                            ),
-                          ],
-                        ))
-                    .toList(),
+              FadeInUp(
+                duration: Duration(
+                  seconds: 1,
+                ),
+                delay: Duration(
+                  seconds: 2,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: categories
+                      .map((item) => Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(10.sp),
+                                width: 70.w,
+                                height: 70.h,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20.r),
+                                    border: Border.all(color: AppColors.lightGreyColor)),
+                                child: item.icon,
+                              ),
+                              SizedBox(
+                                height: 3.h,
+                              ),
+                              Container(
+                                constraints: BoxConstraints(maxWidth: 70.w),
+                                child: item.name,
+                              ),
+                            ],
+                          ))
+                      .toList(),
+                ),
               ),
               CustomTextField(
                 type: TextFormFieldType.search,
@@ -123,20 +137,21 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Container(
                   // margin: EdgeInsets.only(bottom: 60.sp),
+                  // height: 600.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(25.r)),
                     color: AppColors.transparent,
                     boxShadow: [
                       BoxShadow(
-                        color: Color(0x40E4462E).withAlpha(20), // #E4462E with 25% opacity
+                        color: Color(0x40E4462E).withAlpha(12), // #E4462E with 25% opacity
                         blurRadius: 25,
                         spreadRadius: 0,
                         offset: Offset(0, 0), // No offset
                       ),
                     ],
                   ),
-                  child: Column(
-                    spacing: 20.sp,
+                  child: ListView(
+                    // spacing: 20.sp,
                     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
@@ -146,88 +161,97 @@ class _HomeState extends State<Home> {
                           CustomText(textType: TextType.seeLess)
                         ],
                       ),
+                      SizedBox(
+                        height: 8.h,
+                      ),
                       ListView.builder(
                         shrinkWrap: true,
-                        physics: BouncingScrollPhysics(),
+                        physics: ScrollPhysics(),
                         itemBuilder: (context, index) {
-                          final isSelected = selectedShip == shipList[index];
-                          return InkWell(
-                            onTap: () {
-                              toggleShip(shipList[index]);
-                            },
-                            child: Container(
-                              // width: double.infinity,
-                              height: isSelected ? 350.h : 50.h,
-                              margin: EdgeInsets.only(
-                                bottom: 20.sp,
-                              ),
-                              padding: EdgeInsets.all(
-                                8.sp,
-                              ),
-                              decoration: BoxDecoration(
-                                  color: AppColors.whiteColor,
-                                  borderRadius: BorderRadius.circular(
-                                    20.r,
+                          return Container(
+                            margin: EdgeInsets.only(
+                              bottom: 20.sp,
+                            ),
+                            padding: EdgeInsets.all(
+                              8.sp,
+                            ),
+                            decoration: BoxDecoration(
+                                color: AppColors.whiteColor,
+                                borderRadius: BorderRadius.circular(
+                                  20.r,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0xF2482226).withAlpha(15), // #E4462E with 25% opacity
+                                    blurRadius: 10,
+                                    spreadRadius: 0,
+                                    offset: Offset(0, 0), // No offset
                                   ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color(0xF2482226).withAlpha(15), // #E4462E with 25% opacity
-                                      blurRadius: 10,
-                                      spreadRadius: 0,
-                                      offset: Offset(0, 0), // No offset
-                                    ),
-                                  ]),
-                              child: Column(
-                                mainAxisAlignment:
-                                    isSelected ? MainAxisAlignment.start : MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        constraints: BoxConstraints(
-                                          maxWidth: 230.w,
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            CustomText(
-                                              textType: TextType.shipName,
-                                              text: shipList[index].shipName,
-                                            ),
-                                            CustomText(
-                                              textType: TextType.shipDate,
-                                              text: shipList[index].shipDate,
-                                            ),
-                                          ],
-                                        ),
+                                ]),
+                            child: FadeInDown(
+                              delay: Duration(
+                                seconds: 2,
+                              ),
+                              child: ExpandablePanel(
+                                theme: ExpandableThemeData(
+                                  iconPadding: EdgeInsets.zero,
+                                  hasIcon: shipList[index].shipStatus != ShipStatus.ordered ? false : true,
+                                  scrollAnimationDuration: Duration(
+                                    seconds: 2,
+                                  ),
+                                  sizeCurve: Curves.ease,
+                                  animationDuration: Duration(
+                                    seconds: 1,
+                                  ),
+                                ),
+                                collapsed: Container(),
+                                expanded: ShipDetailsWidget(
+                                  shipModel: shipList[index],
+                                ),
+                                header: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      constraints: BoxConstraints(
+                                        maxWidth: 230.w,
                                       ),
-                                      /* shipList[index].shipStatus == ShipStatus.ordered
-                                      ? Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            // CustomText(
-                                            //   textType: TextType.shipTime,
-                                            // ),
-                                            // CustomText(
-                                            //   textType: TextType.deliveredAt,
-                                            //   text: shipList[index].shipTime,
-                                            // )
-                                          ],
-                                        )
-                                      : */
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          CustomText(
+                                            textType: TextType.shipName,
+                                            text: shipList[index].shipName,
+                                          ),
+                                          CustomText(
+                                            textType: TextType.shipDate,
+                                            text: shipList[index].shipDate,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    /* shipList[index].shipStatus == ShipStatus.ordered
+                                       ? Column(
+                                           mainAxisAlignment: MainAxisAlignment.center,
+                                           children: [
+                                             // CustomText(
+                                             //   textType: TextType.shipTime,
+                                             // ),
+                                             // CustomText(
+                                             //   textType: TextType.deliveredAt,
+                                             //   text: shipList[index].shipTime,
+                                             // )
+                                           ],
+                                         )
+                                       : */
 
-                                      shipList[index].shipStatus == ShipStatus.ordered
-                                          ? isSelected
-                                              ? CustomImage(
-                                                  type: ImageType.arrowUp,
-                                                )
-                                              : CustomImage(
-                                                  type: ImageType.arrowRight,
-                                                )
-                                          : shipList[index].shipStatus == ShipStatus.delivered
-                                              ? shipList[index].shipRate != '0'
-                                                  ? ListView.builder(
+                                    shipList[index].shipStatus == ShipStatus.ordered
+                                        ? Container()
+                                        : shipList[index].shipStatus == ShipStatus.delivered
+                                            ? shipList[index].shipRate != '0'
+                                                ? SizedBox(
+                                                    height: 20.h,
+                                                    child: ListView.builder(
+                                                      physics: ScrollPhysics(),
                                                       shrinkWrap: true,
                                                       itemBuilder: (context, index) => Icon(
                                                         Icons.star,
@@ -236,62 +260,44 @@ class _HomeState extends State<Home> {
                                                       ),
                                                       itemCount: 5,
                                                       scrollDirection: Axis.horizontal,
-                                                    )
-                                                  : CustomButton(
-                                                      type: ButtonType.rateNow,
-                                                      onPressed: () {},
-                                                    )
-                                              : shipList[index].shipStatus == ShipStatus.cancelled
-                                                  ? CustomText(
-                                                      textType: TextType.shipCancelled,
-                                                    )
-                                                  : CustomText(
-                                                      textType: TextType.shipCancelled,
-                                                    )
-                                    ],
-                                  ),
-                                  if (isSelected) ShipDetailsWidget(shipModel: shipList[index])
-                                ],
+                                                    ),
+                                                  )
+                                                : CustomButton(
+                                                    type: ButtonType.rateNow,
+                                                    onPressed: () {},
+                                                  )
+                                            : shipList[index].shipStatus == ShipStatus.cancelled
+                                                ? CustomText(
+                                                    textType: TextType.shipCancelled,
+                                                  )
+                                                : CustomText(
+                                                    textType: TextType.shipCancelled,
+                                                  )
+                                  ],
+                                ),
                               ),
                             ),
                           );
                         },
                         itemCount: shipList.length,
                       ),
-                      // Row(
-                      //   children: [
-                      //     CustomText(textType: TextType.previousAppointments),
-                      //   ],
-                      // ),
-
-                      // Spacer(),
-                      // Container(
-                      //   height: 150.h,
-                      //   // margin: EdgeInsets.only(bottom: 60.sp),
-                      //   width: double.infinity,
-                      //   decoration: BoxDecoration(
-                      //       boxShadow: [
-                      //         BoxShadow(
-                      //           color: AppColors.whiteColor.withAlpha(10), // #E4462E with 25% opacity
-                      //           blurRadius: 25,
-                      //           spreadRadius: 0,
-                      //           offset: Offset(0, 0), // No offset
-                      //         ),
-                      //       ],
-                      //       // color: Color(0x40E4462E).withAlpha(20),
-                      //       borderRadius: BorderRadius.vertical(top: Radius.circular(20.r))),
-                      //   child: Row(
-                      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //     children: [
-                      //       CustomText(textType: TextType.myShippings),
-                      //       CustomImage(type: ImageType.arrowUp)
-                      //     ],
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
               ),
+              SafeArea(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CustomText(
+                      textType: TextType.myShippings,
+                    ),
+                    CustomImage(
+                      type: ImageType.arrowUp,
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),

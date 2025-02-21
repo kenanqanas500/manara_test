@@ -35,7 +35,9 @@ class _ShipDetailsWidgetState extends State<ShipDetailsWidget> {
             ? 2
             : widget.shipModel.shipStatus == ShipStatus.onTheWay
                 ? 2.5
-                : 1;
+                : widget.shipModel.shipStatus == ShipStatus.delivered
+                    ? 3
+                    : 1;
     super.initState();
   }
 
@@ -102,11 +104,18 @@ class _ShipDetailsWidgetState extends State<ShipDetailsWidget> {
           child: FlutterMap(
             mapController: MapController(),
             options: MapOptions(
-              initialCenter: LatLng(
-                double.parse(widget.shipModel.latitude),
-                double.parse(widget.shipModel.longitude),
-              ),
-            ),
+                onTap: (position, co) {
+                  log("clicked => ${co.longitude} + ${co.latitude}");
+                },
+                initialCenter: LatLng(
+                  35.6895,
+                  139.6917,
+                )
+                // initialCenter: LatLng(
+                //   double.parse(widget.shipModel.latitude),
+                //   double.parse(widget.shipModel.longitude),
+                // ),
+                ),
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -116,9 +125,13 @@ class _ShipDetailsWidgetState extends State<ShipDetailsWidget> {
                 markers: [
                   Marker(
                     point: LatLng(
-                      double.parse(widget.shipModel.latitude),
-                      double.parse(widget.shipModel.longitude),
+                      35.6895,
+                      139.6917,
                     ),
+                    // point: LatLng(
+                    //   double.parse(widget.shipModel.latitude),
+                    //   double.parse(widget.shipModel.longitude),
+                    // ),
                     width: 80,
                     height: 80,
                     child: Icon(
